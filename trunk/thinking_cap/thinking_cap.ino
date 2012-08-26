@@ -35,11 +35,7 @@ void loop()
   if(val < 30)
   {
     //If it isn't, generate a square pulse
-    analogWrite(circuitpin, pwmVal);
-    //Serial.print("Hello ");
-    //Serial.print(val);
-    //Serial.print(" : ");
-    //Serial.println(pwmVal);    
+    analogWrite(circuitpin, pwmVal); 
   }
   else
   {
