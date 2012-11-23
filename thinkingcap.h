@@ -8,7 +8,7 @@
 #endif
 
 class ThinkingCap {
-  private:
+  protected:
   int redpin;
   int greenpin;
   int bluepin;
@@ -16,12 +16,12 @@ class ThinkingCap {
   int magneticpin;
   int transistorpin;
   public:
-  ThinkingCap(); //Default Constructor
+  ThinkingCap();                             //Default Constructor
   ThinkingCap(int, int, int, int, int, int); //Not-so-default constructor
-  void begin();  //Initializes the Thinking Cap
-  void tDCS(int, int);   //Carries out transcranial Direct Current Stimulation
-  void tMS();    //Carries out transcranial Magnetic Stimulation
-  void CES(int); //Carries out Cranial Electrotherapy Stimulation
+  void begin();                              //Initializes the Thinking Cap
+  void tDCS(int, int);                       //Carries out transcranial Direct Current Stimulation
+  void tMS();                                //Carries out transcranial Magnetic Stimulation
+  void CES(int);                             //Carries out Cranial Electrotherapy Stimulation
 };
 
 #endif
