@@ -1,3 +1,12 @@
+/***************************************************************************
+**Controls an Arduino to send current to a Thinking Cap (v1.0)**
+**Contains methods to initiate tDCS (with ramp-up and ramp-down) and CES**
+**Warning:  Do not exceed 2 mA of current!**
+**This library is designed to work with the corresponding header file.  If that file
+was not included, you can find it at [insert project URL here]**
+**Written 2012 by ianmathwiz7, of Grindhouse Wetware (ianmathwiz7@gmail.com)**
+***************************************************************************/
+
 #include "thinkingcap.h"
 
 int chargetime = 5000; //How long (in ms)to allow capacitor C1 to charge (for tMS)
