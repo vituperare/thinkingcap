@@ -1,16 +1,7 @@
-/***************************************************************************
-**Controls an Arduino to send current to a Thinking Cap (v1.0)**
-**Contains methods to initiate tDCS (with ramp-up and ramp-down) and CES**
-**Warning:  Do not exceed 2 mA of current!**
-**This library is designed to work with the corresponding header file.  If that file
-was not included, you can find it at [insert project URL here]**
-**Written 2012 by ianmathwiz7, of Grindhouse Wetware (ianmathwiz7@gmail.com)**
-***************************************************************************/
-
 #include "thinkingcap.h"
 
 int chargetime = 5000; //How long (in ms)to allow capacitor C1 to charge (for tMS)
-int pulsetime = 20;    //How long (in µs) to allow capacitor C1 to discharge (for tMS)
+int pulsetime = 20; //How long (in µs) to allow capacitor C1 to discharge (for tMS)
 
 ThinkingCap::ThinkingCap()
 {
@@ -41,7 +32,9 @@ boolean ThinkingCap::begin()
 	pinMode(magneticpin1, OUTPUT);
 	pinMode(magneticpin2, OUTPUT);
 	
-	return Serial.begin(9600);
+	Serial.begin(9600);
+	
+	return true;
 }
 
 void ThinkingCap::tDCS(int rampTime, int stimTime)
@@ -73,11 +66,11 @@ void ThinkingCap::tDCS(int rampTime, int stimTime)
 	    //Every 30 seconds, print how much time is left
 		if(!((millis() - timer) % 30000))
 		{
-		Serial.print(1200.0 - (millis() - timer)/1000.0);
+		Serial.print((stimTime - (millis() - timer))/1000.0);
 		Serial.println(" seconds left!");
 	}
 	}
-	//After 20 minutes, ramp down current
+	//After stimTime, ramp down current
 	int endTime = millis();
 	Serial.println("Ramping down current.");
 	for(;;)
@@ -95,8 +88,8 @@ void ThinkingCap::tDCS(int rampTime, int stimTime)
 	digitalWrite(greenpin, HIGH);
 }
 
-/*
- ***FOR INTERNAL USE ONLY; NOT RECOMMENDED FOR CONSUMER USE***
+
+ //***FOR INTERNAL USE ONLY; NOT RECOMMENDED FOR CONSUMER USE***
 void ThinkingCap::tMS()
 {
 	digitalWrite(magneticpin1, HIGH); //Activate the tMS circuit
@@ -106,7 +99,7 @@ void ThinkingCap::tMS()
 	delayMicroseconds(pulsetime);
 	digitalWrite(magneticpin2, LOW);  //Go away, closed circuit (unnecessary if a thyristor is used instead of a P-type transistor
 	digitalWrite(bluepin, LOW);       //Turn status LED off
-}*/
+}
 
 void ThinkingCap::CES(int frequency)
 {
