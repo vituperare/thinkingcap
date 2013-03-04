@@ -21,8 +21,3 @@ For the time being the thinking cap is powered by two nine volt batteries. The b
 == Electrodes ==
 
 The electrodes are the part opf thinking cap that are applied the the users head. There are two electrodes on thinking cap; the anode and the cathode. The anode and cathode are marked by the color the wire connecting the electrode to the processing unit. The anode red, the cathode black (or green), depending on generation of thinking cap. The anode is placed on the left side of the users head. The cathode is placed on right side of users head. 
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
