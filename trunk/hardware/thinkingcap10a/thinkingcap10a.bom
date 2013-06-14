@@ -1,0 +1,21 @@
+Partlist exported from C:/Users/Ian/Subversion/Thinking Cap/trunk/hardware/thinkingcap10a.sch at 6/13/2013 6:02:08 PM
+
+Assembly variant: 
+
+Part Value      Device       Package  Description                                                      
+IC1  ATMEGA644M ATMEGA644M   MLF44-TH 8-bit Microcontroller with 64K Bytes In-System Programmable Flash
+IC2  AD811E     AD811E       PLCC20   High Performance Video Op Amp                                    
+ICSP            PINHD-2X3/90 2X03/90  PIN HEADER                                                       
+LED1 LAW57B     LAW57B       W57B     Golden Dragon® 1 Watt LED                                        
+LED2 LAW57B     LAW57B       W57B     Golden Dragon® 1 Watt LED                                        
+LED3 LAW57B     LAW57B       W57B     Golden Dragon® 1 Watt LED                                        
+LOAD            R-US_0204/2V 0204V    RESISTOR, American symbol                                        
+Q1   2N4416     2N4416       TO72     N-Channel JFET                                                   
+R1   330        R-US_0204/2V 0204V    RESISTOR, American symbol                                        
+R2   330        R-US_0204/2V 0204V    RESISTOR, American symbol                                        
+R3   330        R-US_0204/2V 0204V    RESISTOR, American symbol                                        
+R4   P592       P592         P592     POTENTIOMETER                                                         
+R5   P592       P592         P592     VARISTOR                                                         
+R6   10k        R-US_0204/2V 0204V    RESISTOR, American symbol                                        
+R7   47k        R-US_0204/2V 0204V    RESISTOR, American symbol                                        
+R8   10k        R-US_0204/2V 0204V    RESISTOR, American symbol                                        
