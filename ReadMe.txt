@@ -29,4 +29,4 @@ THe "hardware" folder contains gerber files, a bill of materials, and Eagle file
 a PCB for the Thinking Cap.  This is included within the "thinkingcap10a" folder; the "thinkingcap10b"
 folder contains a design for a separate circuit that is not released nor recommended for use.
 
-Thinking Cap v1.0 designed by ianmathwiz7; released 7-1-2013 by Grindhouse Wetware.
+Thinking Cap v1.0 designed by ianmathwiz7; released 7-1-2013 by Grindhouse Wetware..
